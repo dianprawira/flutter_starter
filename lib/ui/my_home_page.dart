@@ -17,20 +17,20 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-              child: const Text('Go to Second Screen'),
+              child: const Text('Halaman Kedua'),
               onPressed: () {
                 Navigator.pushNamed(context, '/secondScreen');
               },
             ),
             ElevatedButton(
-              child: const Text('Navigation with Data'),
+              child: const Text('Navigasi Beserta Data'),
               onPressed: () {
                 Navigator.pushNamed(context, '/secondScreenWithData',
-                    arguments: 'Hello from First Screen!');
+                    arguments: 'Ini merupakan teks dari halaman awal!');
               },
             ),
             ElevatedButton(
-              child: const Text('Return Data from Another Screen'),
+              child: const Text('Mengembalikan Data dari Halaman Sebelumnya'),
               onPressed: () async {
                 final scaffoldMessenger = ScaffoldMessenger.of(context);
                 final result =
@@ -40,7 +40,7 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ElevatedButton(
-              child: const Text('Replace Screen'),
+              child: const Text('Halaman Tertimpa'),
               onPressed: () {
                 Navigator.pushNamed(context, '/replacementScreen');
               },

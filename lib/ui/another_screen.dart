@@ -9,10 +9,10 @@ class AnotherScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('Back to First Screen'),
+          children: [
+            const Text('Kembali Ke Halaman Sebelumya'),
             ElevatedButton(
-              child: const Text('Back'),
+              child: const Text('Kembali'),
               onPressed: () {
                 Navigator.pop(context);
               },
