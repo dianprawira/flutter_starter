@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/ui/pemrosesan_input_page.dart';
 import 'ui/my_home_page.dart';
 
 void main() {
@@ -15,9 +16,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: const MyHomePage(
-        title: 'Selamat Datang',
-      ),
+      home: const PemrosesanInputPage(
+          // title: 'Selamat Datang',
+          ),
     );
   }
 }
