@@ -10,11 +10,11 @@ class Berubah extends StatefulWidget {
 }
 
 class _BerubahState extends State<Berubah> {
-  String judul = "Judul Teks";
+  String lampu = 'assets/image/off.png';
 
   void _ubahJudul() {
     setState(() {
-      judul = "Judulnya sudah berubah";
+      lampu = 'assets/image/on.jpg';
     });
   }
 
@@ -25,8 +25,11 @@ class _BerubahState extends State<Berubah> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(judul),
-            ElevatedButton(onPressed: _ubahJudul, child: const Text('Tekan'))
+            Image.asset(lampu),
+            ElevatedButton(
+              onPressed: _ubahJudul,
+              child: const Text('Tekan'),
+            )
           ],
         ),
       ),
