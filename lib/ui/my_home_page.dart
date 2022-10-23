@@ -10,8 +10,19 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: const Center(
-        child: Text('Belajar Interaksi'),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Belajar Interaksi'),
+            TextButton(
+              onPressed: () {
+                print('Ini ditekan');
+              },
+              child: const Text('Tekan Saya'),
+            ),
+          ],
+        ),
       ),
     );
   }
