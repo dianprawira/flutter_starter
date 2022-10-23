@@ -10,8 +10,13 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: const Center(
-        child: Text('Halo Semuanya'),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/second');
+          },
+          child: const Text('Launch screen'),
+        ),
       ),
     );
   }
