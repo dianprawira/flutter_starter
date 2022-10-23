@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/ui/belajar_checkbox_page.dart';
+import 'package:flutter_starter/ui/belajar_radio_page.dart';
 import 'package:flutter_starter/ui/pemrosesan_input_page.dart';
 import 'ui/my_home_page.dart';
 
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: const PemrosesanInputPage(
+      home: const BelajarCheckboxPage(
           // title: 'Selamat Datang',
           ),
     );
