@@ -26,6 +26,7 @@ class _BelajarCheckboxPageState extends State<BelajarCheckboxPage> {
               onChanged: (bool? value) {
                 setState(() {
                   isAgree = value!;
+                  print(isAgree);
                 });
               },
             ),
