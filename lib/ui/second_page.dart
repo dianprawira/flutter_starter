@@ -11,7 +11,9 @@ class SecondPage extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () => print('Tempat aksinya'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
           child: const Text('GoBack'),
         ),
       ),
