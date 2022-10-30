@@ -1,17 +1,34 @@
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key});
 
-  final String title;
+  // final _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: const Text('Welcome'),
       ),
-      body: const Center(
-        child: Text('Halo Semuanya'),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(
+              child: const Text('Halaman Index'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/indexTaskPage');
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Tambah Tugas'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/createTaskPage');
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'ui/create_task_page.dart';
+import 'ui/index_task_page.dart';
 import 'ui/my_home_page.dart';
 
 void main() {
@@ -15,9 +17,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: const MyHomePage(
-        title: 'Selamat Datang',
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const MyHomePage(),
+        '/indexTaskPage': (context) => const IndexTaskPage(),
+        '/createTaskPage': (context) => const CreateTaskPage(),
+      },
     );
   }
 }
