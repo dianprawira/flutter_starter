@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/ui/single_task_page.dart';
 import 'ui/create_task_page.dart';
 import 'ui/index_task_page.dart';
 import 'ui/my_home_page.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const MyHomePage(),
         '/indexTaskPage': (context) => const IndexTaskPage(),
         '/createTaskPage': (context) => const CreateTaskPage(),
+        '/singleTask': (context) => const SingleTaskPage(),
       },
     );
   }

@@ -1,1 +1,1 @@
-var urlTask = "https://localhost:8000/api";
+var urlTask = "https://localhost/api";

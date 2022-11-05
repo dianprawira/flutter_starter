@@ -27,6 +27,12 @@ class MyHomePage extends StatelessWidget {
                 Navigator.pushNamed(context, '/createTaskPage');
               },
             ),
+            ElevatedButton(
+              child: const Text('Lihat Tugas id:20'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/singleTask');
+              },
+            ),
           ],
         ),
       ),

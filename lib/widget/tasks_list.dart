@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../data/task.dart';
+import 'package:flutter_starter/ui/detail_task_page.dart';
+import '../data/model/task.dart';
 
 class TasksList extends StatelessWidget {
   const TasksList({super.key, required this.tasks});
@@ -13,6 +14,10 @@ class TasksList extends StatelessWidget {
       itemBuilder: (context, index) {
         return ListTile(
           title: Text(tasks[index].name),
+          onTap: () =>
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return DetailTaskPage(idTask: tasks[index].id);
+          })),
         );
       },
     );

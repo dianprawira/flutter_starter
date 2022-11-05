@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../data/task.dart';
+import '../data/model/task.dart';
+import '../data/api/api_task.dart';
 import 'dart:async';
 // import 'dart:convert';
 
@@ -41,7 +42,7 @@ class _CreateTaskPageState extends State<CreateTaskPage> {
         ElevatedButton(
           onPressed: () {
             setState(() {
-              _futureTask = createTask(_controller.text);
+              _futureTask = ApiTask().createTask(_controller.text);
             });
           },
           child: const Text('Create Data'),
