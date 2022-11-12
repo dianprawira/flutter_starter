@@ -15,8 +15,6 @@ class _LoginPageState extends State<LoginPage> {
 
   bool _formState = true;
 
-  SnackBar? snackBar;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +29,6 @@ class _LoginPageState extends State<LoginPage> {
       child: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          // const CircularProgressIndicator(),
           TextField(
             controller: _usernameCont,
             decoration: const InputDecoration(hintText: 'Username/Email'),
@@ -59,11 +56,10 @@ class _LoginPageState extends State<LoginPage> {
     var authku = ApiAuth();
     try {
       var user = await authku.login(_usernameCont.text, _passwordCont.text);
-      // print('sukses ${user.user.name} success');
       SpUtil.putString('token', user.token);
       SpUtil.putBool('isLogin', true);
       if (!mounted) return;
-      Navigator.pushNamedAndRemoveUntil(context, '/', ModalRoute.withName('/'));
+      Navigator.pop(context);
     } catch (error) {
       _showMyDialog(context, error);
     }
