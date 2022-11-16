@@ -55,8 +55,9 @@ class _LoginPageState extends State<LoginPage> {
 
     var authku = ApiAuth();
     try {
+      await SpUtil.getInstance();
       var user = await authku.login(_usernameCont.text, _passwordCont.text);
-      SpUtil.putString('token', user.token);
+      SpUtil.putString('token', user.token.toString());
       SpUtil.putBool('isLogin', true);
       if (!mounted) return;
       Navigator.pop(context);

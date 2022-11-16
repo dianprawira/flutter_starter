@@ -1,11 +1,17 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:sp_util/sp_util.dart';
 import '../model/task.dart';
 import '../../common/url_address.dart';
 
 class ApiTask {
   Future<List<Task>> listOfTask() async {
-    final response = await http.get(Uri.parse("$urlTask/tasks"));
+    var token = SpUtil.getString('token');
+    final response = await http.get(Uri.parse("$urlTask/tasks"), headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': 'Bearer $token',
+    });
     if (response.statusCode == 200) {
       return List<Task>.from(
           json.decode(response.body).map((x) => Task.fromJson(x)));
